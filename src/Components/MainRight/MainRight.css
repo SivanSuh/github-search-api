@@ -1,0 +1,6 @@
+.rightbar {
+  width: calc(70%);
+  max-width: 894px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}

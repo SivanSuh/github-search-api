@@ -1,0 +1,37 @@
+.navtwo {
+  display: flex;
+  width: 100%;
+  height: 49px;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.navtwo-container {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 50px;
+}
+.navtwo-interface {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.navtwo-interface:hover {
+  border-bottom: 2px solid orange;
+}
+.link {
+  margin: 0 15px;
+  font-size: 16px;
+  color: #6e7781;
+  text-decoration: none;
+}
+.navtwo-color {
+  margin-left: 30px;
+}

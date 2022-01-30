@@ -1,0 +1,73 @@
+.main-container {
+  width: 296px;
+  height: 100%;
+}
+.main-left {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+img {
+  border-radius: 50%;
+  width: 100%;
+  margin-top: -30px;
+  z-index: 1;
+  height: 296px;
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  .main-container {
+    width: 256px;
+    height: 100%;
+  }
+}
+.name {
+  margin: 15px 0;
+}
+
+.main-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.btn {
+  width: 100%;
+  margin: 20px 0;
+}
+button {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  min-height: 35px;
+}
+
+.follow {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+.simge {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.followers {
+  margin-left: 10px;
+}
+i {
+  margin: 5px;
+}

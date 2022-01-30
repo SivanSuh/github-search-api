@@ -1,0 +1,19 @@
+.changeColor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-color {
+  background-color: lightgreen;
+  color: white;
+  border: none;
+  border-radius: 1px solid white;
+  transition: 0.2s linear;
+}
+.btn-color:hover {
+  transform: scale(0.8);
+}
+.btn-color.yellow {
+  background-color: yellow;
+  color: darkmagenta;
+}
