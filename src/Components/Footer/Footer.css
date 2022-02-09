@@ -2,7 +2,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   width: 100%;
   min-height: 60px;
   border-top: 1px solid gray;

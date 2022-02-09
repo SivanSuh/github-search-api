@@ -41,12 +41,11 @@ i {
 }
 .info {
   display: flex;
-  margin-left: 5px;
+  margin-left: 10px;
   justify-content: center;
-  width: 400px;
-  padding: 4px;
+  padding: 4px 0;
 }
-@media (max-width: 960px) {
+@media (max-width: 870px) {
   .info {
     display: none;
   }

@@ -22,15 +22,19 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 5px;
+  margin: 0 5px;
 }
 .navtwo-interface:hover {
   border-bottom: 2px solid orange;
 }
-.link {
+.NavLink {
   margin: 0 15px;
   font-size: 16px;
   color: #6e7781;
   text-decoration: none;
+}
+.Navlink-active {
+  border-bottom: 2px solid orange;
 }
 .navtwo-color {
   margin-left: 30px;

@@ -1,64 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavTwo.css";
-import { Link } from "react-router-dom";
-import ChangeColor from "./ChangeColor/ChangeColor";
+import { NavLink } from "react-router-dom";
 
 const NavTwo = () => {
+  const [active, setActive] = useState(false);
+
+  const HandleClick = (event) => {
+    event.preventDefault();
+    setActive(true);
+  };
+
   return (
     <div className="navtwo">
       <div className="navtwo-container">
         <div className="navtwo-interface">
           <div>
-            <i class="fas fa-book-open"></i>
+            <i className="fas fa-book-open"></i>
           </div>
           <div>
-            <Link to="/overview" className="link active">
+            <NavLink to="/overview" className="NavLink">
               Overview
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navtwo-interface">
           <div>
-            <i class="fas fa-server"></i>
+            <i className="fas fa-server"></i>
           </div>
           <div>
-            <Link to="/repos" className="link">
+            <NavLink to="/repos" className="NavLink">
               Repository
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navtwo-interface">
           <div>
-            <i class="fas fa-tasks"></i>
+            <i className="fas fa-tasks"></i>
           </div>
           <div>
-            <Link to="/projects" className="link">
+            <NavLink to="/projects" className="NavLink">
               Projects
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navtwo-interface">
           <div>
-            <i class="fas fa-cube"></i>
+            <i className="fas fa-cube"></i>
           </div>
           <div>
-            <Link to="/packages" className="link">
+            <NavLink to="/packages" className="NavLink">
               Packages
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navtwo-interface">
           <div>
-            <i class="far fa-star"></i>
+            <i className="far fa-star"></i>
           </div>
           <div>
-            <Link to="/star" className="link">
+            <NavLink to="/star" className="NavLink" onClick={HandleClick}>
               Star
-            </Link>
+            </NavLink>
           </div>
-        </div>
-        <div className="navtwo-color">
-          <ChangeColor />
         </div>
       </div>
     </div>

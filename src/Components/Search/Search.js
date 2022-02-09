@@ -1,38 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Search.css";
-import axios from "axios";
 import Projects from "../Projects/Projects";
+import { Context } from "../Context/Context";
 
 const Search = () => {
   const [value, setValue] = useState("");
-  const [repos, setRepos] = useState([]);
 
-  const HandleClicked = async (e) => {
+  const { GithubSearch } = useContext(Context);
+
+  const HandleClicked = (e) => {
     e.preventDefault();
-    console.log(value);
+    console.log(GithubSearch(value));
+
     setValue("");
-    try {
-      const result = await axios(`https://api.github.com/users/${value}/repos`);
-      setRepos(result);
-    } catch (err) {
-      console.log(err);
-    }
   };
-  console.log(repos);
+
   return (
     <>
-      <div className="input-search">
+      <form className="input-search" onSubmit={HandleClicked}>
         <input
           type="text"
           placeholder="Search or jump to..."
           className="input"
           value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
-        <button className="input-btn" onClick={HandleClicked}>
-          add
-        </button>
-      </div>
-      {/* <Projects repos={repos} /> */}
+      </form>
+
+      {/* <Projects users={value} /> */}
     </>
   );
 };

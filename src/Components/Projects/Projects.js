@@ -1,15 +1,14 @@
 import React from "react";
 import "./Projects.css";
-const Projects = ({ repos }) => {
-  const list =
-    repos.length !== 0 ? (
-      repos.data.map((item) => <li>{item.name}</li>)
-    ) : (
-      <li>note found</li>
-    );
+const Projects = ({ users }) => {
   return (
     <div>
-      <ul>{list}</ul>;
+      <ul>
+        {users.map((u) => (
+          <li key={u.id}>{u.name}</li>
+        ))}
+      </ul>
+      ;
     </div>
   );
 };

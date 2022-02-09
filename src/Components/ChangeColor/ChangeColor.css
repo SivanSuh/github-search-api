@@ -1,0 +1,21 @@
+.dark {
+  background-color: #0a0c10;
+  color: #6e7781;
+}
+.light {
+  background-color: white;
+}
+.color-btn {
+  position: absolute;
+  top: 18px;
+  width: 100px;
+  min-height: 30px;
+  right: 200px;
+  background-color: crimson;
+  color: yellow;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.color-btn:hover {
+  transform: scale(0.9);
+}
