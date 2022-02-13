@@ -1,29 +1,28 @@
-import React from "react";
-import Navbar from "./Components/Navbar/Navbar";
+import React, { useState } from "react";
 import "./App.css";
-import NavTwo from "./Components/NavTwo/NavTwo";
-import MainLeft from "./Components/MainLeft/MainLeft";
-import MainRight from "./Components/MainRight/MainRight";
-import { BrowserRouter as Router } from "react-router-dom";
+
 import Footer from "./Components/Footer/Footer";
 import ChangeColor from "./Components/ChangeColor/ChangeColor";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Folder/Home";
+import Repository from "./Components/Repository/Repository";
+import Main from "./Folder/Main";
 
-function App() {
+const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="app">
         <ChangeColor>
-          <Navbar />
-          <NavTwo />
-          <div className="main">
-            <MainLeft />
-            <MainRight />
-          </div>
+          <Home />
+          <Routes>
+            <Route exact path="/" element={<Main />} />
+            <Route path="/repos" element={<Repository />} />
+          </Routes>
           <Footer />
         </ChangeColor>
       </div>
-    </Router>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -27,13 +27,13 @@
 .navtwo-interface:hover {
   border-bottom: 2px solid orange;
 }
-.NavLink {
+.Link {
   margin: 0 15px;
   font-size: 16px;
   color: #6e7781;
   text-decoration: none;
 }
-.Navlink-active {
+.Link-active {
   border-bottom: 2px solid orange;
 }
 .navtwo-color {

@@ -1,14 +1,10 @@
 import React from "react";
 import "./Projects.css";
-const Projects = ({ users }) => {
+const Projects = ({ repos }) => {
   return (
-    <div>
-      <ul>
-        {users.map((u) => (
-          <li key={u.id}>{u.name}</li>
-        ))}
-      </ul>
-      ;
+    <div className="projects">
+      <h4>{repos}</h4>
+      <h4>{repos.deger}</h4>
     </div>
   );
 };

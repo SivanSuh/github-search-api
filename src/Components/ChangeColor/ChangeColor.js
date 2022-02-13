@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import "./ChangeColor.css";
-
+import Context from "../Context/Context";
 const ChangeColor = ({ children }) => {
-  const [color, setColor] = useState();
+  const { themes } = useContext(Context);
+  const [color, setColor] = useState(themes);
   const data = (renk) => {
     setColor(renk);
   };

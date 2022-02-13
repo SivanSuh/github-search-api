@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./NavTwo.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavTwo = () => {
   const [active, setActive] = useState(false);
@@ -18,9 +18,9 @@ const NavTwo = () => {
             <i className="fas fa-book-open"></i>
           </div>
           <div>
-            <NavLink to="/overview" className="NavLink">
+            <Link to="/" className="Link">
               Overview
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="navtwo-interface">
@@ -28,9 +28,9 @@ const NavTwo = () => {
             <i className="fas fa-server"></i>
           </div>
           <div>
-            <NavLink to="/repos" className="NavLink">
+            <Link to="/repos" className="Link">
               Repository
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="navtwo-interface">
@@ -38,9 +38,9 @@ const NavTwo = () => {
             <i className="fas fa-tasks"></i>
           </div>
           <div>
-            <NavLink to="/projects" className="NavLink">
+            <Link to="/" className="Link">
               Projects
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="navtwo-interface">
@@ -48,9 +48,9 @@ const NavTwo = () => {
             <i className="fas fa-cube"></i>
           </div>
           <div>
-            <NavLink to="/packages" className="NavLink">
+            <Link to="/" className="Link">
               Packages
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="navtwo-interface">
@@ -58,9 +58,9 @@ const NavTwo = () => {
             <i className="far fa-star"></i>
           </div>
           <div>
-            <NavLink to="/star" className="NavLink" onClick={HandleClick}>
+            <Link to="/" className="Link" onClick={HandleClick}>
               Star
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>

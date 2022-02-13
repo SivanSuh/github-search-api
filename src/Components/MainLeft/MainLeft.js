@@ -1,34 +1,44 @@
 import React from "react";
 import "./MainLeft.css";
-
-const MainLeft = () => {
+const MainLeft = ({
+  avatar_url,
+  login,
+  bio,
+  followers,
+  following,
+  company,
+  location,
+}) => {
   return (
     <div className="main-container">
       <div className="main-left">
         <div className="image">
           <img
-            src="https://avatars.githubusercontent.com/u/63097457?v=4"
+            src={
+              avatar_url ||
+              "https://avatars.githubusercontent.com/u/63097457?v=4"
+            }
             alt="foto"
           />
         </div>
         <div className="main-bottom">
           <div className="name">
-            <h2>Şivan Suh</h2>
+            <h2>{login || "nothing"}</h2>
           </div>
           <div>
-            <p>I am a Mecatronics Technican and Computer Programming</p>
+            <p>{bio || "nothing"}</p>
           </div>
           <div className="btn">
             <button>Edit Profile</button>
           </div>
           <div className="follow">
             <div>
-              <i class="fas fa-user-friends"></i>
-              <span>16</span>
+              <i className="fas fa-user-friends"></i>
+              <span>{followers}</span>
               <span style={{ marginLeft: "5px" }}>followers</span>
             </div>
             <div className="followers">
-              <span>19</span>
+              <span>{following}</span>
               <span style={{ marginLeft: "5px" }}>following</span>
             </div>
           </div>
@@ -36,34 +46,18 @@ const MainLeft = () => {
           <div className="portfolio">
             <div className="simge">
               <div>
-                <i class="fas fa-hotel"></i>
+                <i className="fas fa-hotel"></i>
               </div>
               <div>
-                <p>Open to work</p>
-              </div>
-            </div>
-            <div className="simge">
-              <div>
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <p>Location</p>
+                <p>{company}</p>
               </div>
             </div>
             <div className="simge">
               <div>
-                <i class="far fa-envelope"></i>
+                <i className="fas fa-map-marker-alt"></i>
               </div>
               <div>
-                <p>Mail</p>
-              </div>
-            </div>
-            <div className="simge">
-              <div>
-                <i class="fas fa-link"></i>
-              </div>
-              <div>
-                <p>Link</p>
+                <p>{location}</p>
               </div>
             </div>
           </div>
