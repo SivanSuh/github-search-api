@@ -16,8 +16,16 @@
   padding-left: 20px;
   transition: 0.2s linear;
 }
+@media (max-width: 500px) {
+  .input {
+    width: 150px;
+  }
+  .input:focus {
+    width: 200px;
+  }
+}
 input:focus {
-  width: 500px;
+  width: 600px;
   background-color: #f6f8fa;
   transition: 0.2s linear;
 }
@@ -25,4 +33,14 @@ input:focus {
   width: 40px;
   margin-left: 5px;
   min-height: 28px;
+}
+@media (max-width: 1000px) {
+  .input:focus {
+    width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .input:focus {
+    width: 200px;
+  }
 }

@@ -1,47 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import Search from "../Search/Search";
+import axios from "axios";
+import "./Search.css";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const [value, setValue] = useState("");
+  const [repository, setRepository] = useState("");
+
+  const api = async () => {
+    try {
+      await axios(`https://api.github.com/users/${value}`).then((res) => {
+        console.log(res.data);
+        setValue(props.setData(res.data));
+      });
+      await axios(`https://api.github.com/users/${value}/repos`).then(
+        (data) => {
+          console.log(data.data);
+          setRepository(props.setData(data.data));
+        }
+      );
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  const HandleClicked = async (e) => {
+    e.preventDefault();
+    await api();
+    setValue("");
+  };
   return (
     <div className="navbar">
       <div className="container">
         <div className="block1">
           <div className="github-logo">
-            <i className="fab fa-github i"></i>
+            <Link to={"/"}>
+              <i className="fab fa-github i"></i>
+            </Link>
           </div>
           <div>
-            <Search />
-          </div>
-          <div className="info">
-            <div>
-              <h4>Pull Request</h4>
-            </div>
-            <div>
-              <h4>Issues</h4>
-            </div>
-            <div>
-              <h4>Market place</h4>
-            </div>
-            <div>
-              <h4>Explore</h4>
-            </div>
-          </div>
-        </div>
-        <div className="block2">
-          <div>
-            <i className="extra far fa-bell"></i>
-          </div>
-          <div className="add extra">
-            <div>
-              <i className="fas fa-plus"></i>
-            </div>
-            <div>
-              <i className=" fas fa-sort-down"></i>
-            </div>
-          </div>
-          <div>
-            <i className="extra far fa-user-circle"></i>
+            <>
+              <form className="input-search" onSubmit={HandleClicked}>
+                <input
+                  type="text"
+                  placeholder="Search or jump to..."
+                  className="input"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                />
+              </form>
+            </>
           </div>
         </div>
       </div>

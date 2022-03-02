@@ -1,21 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MainLeft.css";
-const MainLeft = ({
-  avatar_url,
-  login,
-  bio,
-  followers,
-  following,
-  company,
-  location,
-}) => {
+import { Link } from "react-router-dom";
+const MainLeft = (props) => {
+  // { avatar_url, login, bio, followers, following, company, location }
+
   return (
     <div className="main-container">
       <div className="main-left">
         <div className="image">
           <img
             src={
-              avatar_url ||
+              props.avatar_url ||
               "https://avatars.githubusercontent.com/u/63097457?v=4"
             }
             alt="foto"
@@ -23,10 +18,10 @@ const MainLeft = ({
         </div>
         <div className="main-bottom">
           <div className="name">
-            <h2>{login || "nothing"}</h2>
+            <h2>{props.login || "SivanSuh"}</h2>
           </div>
           <div>
-            <p>{bio || "nothing"}</p>
+            <p>{props.bio || "null"}</p>
           </div>
           <div className="btn">
             <button>Edit Profile</button>
@@ -34,12 +29,24 @@ const MainLeft = ({
           <div className="follow">
             <div>
               <i className="fas fa-user-friends"></i>
-              <span>{followers}</span>
-              <span style={{ marginLeft: "5px" }}>followers</span>
+              <span>{props.followers}</span>
+              <a
+                className="a"
+                target="_blank"
+                href={`https://github.com/${props.login}?tab=followers`}
+              >
+                <span style={{ marginLeft: "5px" }}>followers</span>
+              </a>
             </div>
             <div className="followers">
-              <span>{following}</span>
-              <span style={{ marginLeft: "5px" }}>following</span>
+              <span>{props.following}</span>
+              <a
+                className="a"
+                target="_blank"
+                href={`https://github.com/${props.login}?tab=following`}
+              >
+                <span style={{ marginLeft: "5px" }}>following</span>
+              </a>
             </div>
           </div>
 
@@ -49,7 +56,7 @@ const MainLeft = ({
                 <i className="fas fa-hotel"></i>
               </div>
               <div>
-                <p>{company}</p>
+                <p>{props.company || "null"}</p>
               </div>
             </div>
             <div className="simge">
@@ -57,7 +64,7 @@ const MainLeft = ({
                 <i className="fas fa-map-marker-alt"></i>
               </div>
               <div>
-                <p>{location}</p>
+                <p>{props.location || "null"}</p>
               </div>
             </div>
           </div>

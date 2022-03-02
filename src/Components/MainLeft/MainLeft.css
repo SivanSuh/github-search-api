@@ -23,20 +23,7 @@ img {
   border: 3px solid #d5d5d9;
   width: 296px;
 }
-@media (max-width: 850px) {
-  .main-container {
-    width: 256px;
-    height: 100%;
-  }
-  .image {
-    width: 256px;
-    height: 256px;
-  }
-  .img {
-    width: 256px;
-    max-height: 256px;
-  }
-}
+
 .name {
   margin: 15px 0;
 }
@@ -79,4 +66,29 @@ button {
 }
 i {
   margin: 5px;
+}
+.a {
+  color: #6e7781;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+.a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+/* media query*/
+
+@media (max-width: 850px) {
+  .main-container {
+    width: 256px;
+    height: 100%;
+  }
+  .image {
+    width: 256px;
+    height: 256px;
+  }
+  .img {
+    width: 256px;
+    max-height: 256px;
+  }
 }

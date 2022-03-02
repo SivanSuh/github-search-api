@@ -20,39 +20,29 @@
   display: flex;
   align-items: center;
 }
-.block2 {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.add {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.extra {
-  margin-left: 25px;
-}
+
 .i {
   font-size: 32px;
+  color: white;
 }
 i {
   size: 3x;
 }
-.info {
-  display: flex;
-  margin-left: 10px;
-  justify-content: center;
-  padding: 4px 0;
-}
+
 @media (max-width: 870px) {
   .info {
     display: none;
   }
 }
-h4 {
+h5 {
   margin-left: 15px;
+  font-size: 16px;
 }
-h4:hover {
+h5:hover {
   color: #aab6c1;
+}
+@media (max-width: 1000px) {
+  .block2 {
+    display: none;
+  }
 }
