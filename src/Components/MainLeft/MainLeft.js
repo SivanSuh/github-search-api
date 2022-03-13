@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MainLeft.css";
-import { Link } from "react-router-dom";
-const MainLeft = (props) => {
-  // { avatar_url, login, bio, followers, following, company, location }
 
+const MainLeft = (props) => {
   return (
     <div className="main-container">
       <div className="main-left">
