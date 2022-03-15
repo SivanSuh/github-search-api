@@ -6,6 +6,7 @@
   margin: 20px auto 0 auto;
   align-items: center;
   border-bottom: 1px solid #d8dee4;
+
   position: sticky;
   top: 0;
 }
@@ -17,6 +18,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-left: 20px;
+  z-index: 111;
 }
 .navtwo-interface {
   display: flex;

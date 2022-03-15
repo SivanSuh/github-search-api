@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Repository.css";
+import { AiOutlineStar } from "react-icons/ai";
 const Repository = ({ repos }) => {
   return (
     <div className="repos">
@@ -12,12 +13,21 @@ const Repository = ({ repos }) => {
               </a>
             </h2>
             <p style={{ padding: "5px 0" }}>{repo.description}</p>
-            <span>
-              <strong>{repo.language}</strong>
-            </span>
+            <div className="repo_detail">
+              <span>
+                <strong>{repo.language}</strong>
+              </span>
+
+              <div className="star">
+                <div>
+                  <AiOutlineStar />
+                </div>
+                <div>{repo.stargazers_count}</div>
+              </div>
+              <p style={{ padding: "5px 0" }}>{repo.created_at}</p>
+            </div>
           </div>
         ))}
-        <button>Enter</button>
       </div>
     </div>
   );
