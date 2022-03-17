@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainLeft from "../Components/MainLeft/MainLeft";
 import MainRight from "../Components/MainRight/MainRight";
 import NavTwo from "../Components/NavTwo/NavTwo";

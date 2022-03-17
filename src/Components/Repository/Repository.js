@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Repository.css";
 import { AiOutlineStar } from "react-icons/ai";
 const Repository = ({ repos }) => {
